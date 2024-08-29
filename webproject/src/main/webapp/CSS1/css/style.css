@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/* div, span {
+	width:100px;
+	height:100px;
+	margin:20px;
+	background-color:red;
+} */
+
+div {
+	width:200px;
+	height:200px;
+	margin:40px;
+	padding:40px;
+	border:1px solid black;
+	background-color:red;
+}
+.div1 {
+	/* 컨텐츠 영역이 줄어들지 않는다 */
+	/* 박스 크기가 커진다 */
+	/* width(컨텐츠 크기 보호) + padding + border 박스 크기 지정 */
+	box-sizing:content-box; /* 아웃사이드 처리 */
+}
+.div2 {
+	/* 컨텐츠 영역을 줄여서 width, height
+	속성에서 지정한 크기로 박스 크기를 맞춘다 */
+	/* width(줄여서) + padding + border 계산한 크기를 
+	width 속성으로 지정한 박스 크기 지정 */
+	box-sizing:border-box; /* 인사이드 처리 */
+}
+.div3 {
+	/* 그림자 지정: box-shadow 속성
+	수평거리 수직거리 흐림정도 번짐정도 색상 (안쪽/바깥쪽 그림자 위치) */
+	box-shadow: 0px 0px 15px 15px orange; 
+}
+.div4 {
+	box-shadow: 0px 0px 20px 20px purple inset;
+}

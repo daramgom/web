@@ -1,0 +1,12 @@
+@charset "UTF-8";
+	/* 선택자 { 속성1:속성값1; 속성2:속성값2; ... } */
+	h1 {
+		color:red; /* 글자색 변경 */
+		background-color: black; /* 배경색 */
+		width: 100px; /* 너비 */
+		height: 50px; /* 높이 */
+	}
+	h3 {
+		color:maroon;
+	}
+	

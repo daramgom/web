@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #ccc;
+	padding: 20px;
+}
+
+#signup {
+	background: #fff;
+	border: 1px solid #222;
+	border-radius: 5px;
+	padding: 20px;
+	width: 400px;
+	margin: 30px auto;
+}
+
+#signup fieldset {
+	border: 1px solid #ccc;
+	margin-bottom: 30px;
+}
+
+#signup legend {
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 7px;
+	padding-bottom: 10px;
+}
+
+#signup ul li {
+	line-height: 30px; /* li 태그의 높이 조절이 유연하게 됨 */
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 5px;
+	/* background: yellow; */
+}
+
+/* input[type=submit] */
+#signup button {
+	border: 1px solid #222;
+	border-radius: 20px;
+	display: block;
+	/* button이 inline 요소이기에 block 요소로 바꿔서 제출 버튼 가운데로 보내기 */
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin: auto; /* 제출 버튼 가운데로 보내기 */
+	padding: 7px 25px;
+	background-color: black;
+	color: #fff;
+}
+
+#signup label {
+	display: inline-block; 
+	font-size: 13px;
+	width: 110px;
+	margin-right: 20px;
+	/* background: orange; */
+}
+
+/* 속성 선택자 */
+/* input[type=text] {
+	background-color: #eee;
+	border-radius: 5px;
+	width: 150px;
+	padding: 20px;
+} */
+
+/* 가상 클래스 선택자 */
+/* input[type=text]:focus, input[type=password]:focus {
+	background-color: #000;
+	color: #fff;
+ 	width: 300px;
+	height: 200px;
+	font-size: 2em;
+} */
+
+/* 가상 요소 선택자 */
+/* input[type=email]::placeholder {
+	color: orange;
+} */
+
+
+
+

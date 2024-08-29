@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>CSS 기본</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+	/* 선택자 { 속성1:속성값1; 속성2:속성값2; ... } */
+	</style>
+	
+</head>
+<body>
+
+	<h3>CSS(Cascading Style Sheet)</h3>
+	<p>
+	HTML 문서 존재하는 요소(tag)들에 선택적으로 스타일(서식)을 적용할 수 있는 기능이다
+	</p>
+	<hr>
+	
+	<h3>사용자 스타일 형식: 인라인, 내부 스타일, 외부 스타일</h3>
+	<h3>1. 인라인(inline) 스타일: 간단한 스타일 정보를 적용할 때 사용</h3>
+	<p>
+	요소(tag)내에 style 속성으로 지정 !!!
+	</p>
+
+	<h1>레드향</h1>
+	<!-- <img alt="" src="../images/aaa.jpg"> -->
+	<p style="color: red;">껍질에 붉든 빛이 돌아 레드향이라 불린다.</p>
+	<p style="color: blue;">레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+	<p>비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+	<hr>
+	
+	<h3>2. 내부 스타일: 적용할 스타일들을 문서 내부의 한 곳에 모아놓고 스타일을 적용</h3>
+	<p>head 영역 내에 style tag로 지정하는 방법</p>
+	<p>내부 스타일 지정형식: 선택자 { 속성1:속성값1; 속성2:속성값2; ... }</p>
+	<h1>실험</h1>
+	<hr>
+	
+	<h3>3. 외부 스타일: 사용할 스타일을 별도 파일로 저장해놓고 필요할 때마다 가져와서 스타일을 적용</h3>
+	<p>head 영역 내에 link tag로 지정하는 방법</p>
+	<p><link rel="stylesheet" type="text/css" href="외부에 저장된 스타일시트 파일 경로"></p>
+	<p>별도의 css 파일로 저장하게되면 확장자가 *.css로 존재한다.</p>
+	<hr>
+	
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트 관련 스타일</title>
+	<style type="text/css">
+	/* 구글 웹 폰트를 사용하여 글꼴 지정하기 */
+	@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+	h1 {
+		/* 최대 3개의 글꼴을 컴마로 구분해서 지정 가능 */
+		/* 띄어쓰기가 되어있는 글꼴은 큰따옴표로 묶어주기 */
+		font-family: 바탕, "맑은 고딕", 굴림;
+		/* 고정 단위: px, pt 
+		상대 단위: em, rem, % */ 
+		font-size: 1.5em; /* 부모 요소의 글자 크기를 기준으로 1.5배 크게 */
+	}
+	.accent {
+		font-size: 150%;
+		/* 글자의 굵기를 조절하는 속성값: bold, bolder, lighter, 100 ~ 900 사이의 숫자로 지정 */
+		font-weight: bold; color: red;
+	}
+	
+	.italic {
+		font-style: italic;
+	}
+	h2 {
+		font-size: 2em;
+		font-weight: bold;
+		font-style: italic;
+		font-family: "Nanum Pen Script", cursive;
+	}
+	</style>
+</head>
+<body>
+	<h1>레드향</h1>
+	<p>껍질에 <span class="accent">붉은</span> 빛이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+	<p class="italic">레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+	<p class="italic">비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+	<!-- <div></div> div는 너비나 높이를 가질 수 있음 <span></span> -->
+	<hr>
+	
+	<h3>웹폰트(WEB FONT): 구글 폰트 사용하기</h3>
+	<h2>HTML + CSS + JAVASCRIPT</h2>
+	</body>
+</html>

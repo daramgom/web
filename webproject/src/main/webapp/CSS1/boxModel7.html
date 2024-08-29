@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>박스 모델 배치 방법 (display 속성)</title>
+<style type="text/css">
+ul {
+	/* 목록 기호 없애기 */
+	list-style: none;
+	/* list-style-type: none; */
+}
+
+li {
+	/* display 속성으로 block 요소와 inline 요소 기능을 합쳐서 사용할 수 있게 지정 */
+	display: inline-block;
+	/* display 속성으로 해당 요소를 화면에 표시하지 않기 */
+	/* display: none; */
+	border: 1px solid black;
+	background-color: black;
+	color: #fff;
+	border: 1px solid black;
+	padding: 15px;
+	margin: 20px 10px;
+	border-radius: 10px;
+}
+
+a {
+	/* 하이퍼링크 밑줄 없애기 */
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	padding: 15px;
+}
+
+/* 가상 선택자 */
+/* 하이퍼링크 위에 마우스를 올렸을 때 문자색 변경 */
+a:hover {
+	color: orange;
+}
+/* 하이퍼링크를 클릭했을 때 문자색 변경 */
+a:active {
+	color: red;
+}
+</style>
+</head>
+<body>
+	<h2>박스 모델 배치 방법 (display 속성)</h2>
+
+	<div>
+		<ul>
+			<li><a href="#">menu 1</a></li>
+			<li><a href="#">menu 2</a></li>
+			<li><a href="#">menu 3</a></li>
+			<li><a href="#">menu 4</a></li>
+		</ul>
+	</div>
+
+
+</body>
+</html>

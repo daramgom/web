@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- 웹페이지에 접속한 사용자의 디바이스 크기를 웹브라우저가 인식할 수 있게 한다. -->
+<meta name="viewport" content = "width = device-width, initial-scale = 1">
+
+<title>미디어 쿼리(media query)</title>
+<style type="text/css">
+	* {
+		padding: 0; margin: 0;
+	}
+	
+	@media screen and (max-width:779px) {
+		body {
+			background-color: orange;
+		}
+		
+		#container {
+			width: 700px;
+			margin: 50px auto;
+		}
+		
+		#container p:nth-child(1) {
+			position: absolute; /* body 시작, 끝 기준 */
+			left: 30px; top: 30px;
+			width: 200px;
+			background: black;
+			color: white;
+			font-weight: 900;
+			box-shadow: 1px 1px #eee;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		
+		#container p:nth-child(2) {
+			display: none;
+		}
+		
+		#container p:nth-child(3) {
+			position: absolute; /* body 시작, 끝 기준 */
+			left: 250px; top: 250px;
+			width: 200px;
+			background: black;
+			color: white;
+			font-weight: 900;
+			box-shadow: 1px 1px #eee;
+			border-radius: 10px;
+			padding: 10px;
+		}
+	}/* media */
+	
+	@media screen and (min-width:1440px) {
+				body {
+			background-color: navy;
+		}
+		
+		#container {
+			width: 1440px;
+			margin: 50px auto;
+		}
+		
+		#container p {
+			width: 400px;
+			display: inline-block;
+			background: #fff;
+			color: black;
+			font-weight: 900;
+			box-shadow: 1px 1px #eee;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		
+	}/* media */
+
+
+</style>
+</head>
+<body>
+
+<div id="container">
+	<p>껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+	
+	<p>껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+	
+	<p>껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>목록 스타일</title>
+
+<style type="text/css">
+/* 목록 스타일 변경 3가지 속성 */
+/* 1. 목록 표시 변경 속성: list-style-type */
+/* 2. 목록 표시를 이미지로 변경 속성: list-style-image */
+/* 3. 목록 들여쓰기 변경 속성: list-style-position */
+
+.book1 {
+	/* 목록 표시: 사각형으로 변경 */
+	/* list-style-type: square; */
+	/* 목록 표시: 없애기 */
+	list-style-type: none;
+}
+.book2 {
+	/* list-style-type: decimal-leading-zero; */
+	/* 목록 표시: 없애기 */
+	list-style-type: none;
+}
+.book3 {
+	/* 목록 표시를 이미지로 변경 */
+	list-style-image: url("img/dot.png"); /* url 메서드 사용 */
+}
+.book4 {
+	/* 목록 들여쓰기 */
+	list-style-position: inside;
+}
+.book5 {
+	/* 목록 변경 속성값들을 한꺼번에 표시 */
+	list-style: lower-alpha inside;
+	/* list-style-type: upper-alpha; */
+	/* list-style-position: inside; */
+}
+
+</style>
+
+
+</head>
+<body>
+	<h3>목록 스타일</h3>
+	<ul class="book1">
+		<li>순서가 없는 목록 스타일</li>
+		<li>list-style-type</li>
+		<li>list-style-image</li>
+		<li>list-style-position</li>
+	</ul>
+	<hr>
+
+	<ol class="book2">
+		<li>순서가 있는 목록 스타일</li>
+		<li>list-style-type</li>
+		<li>list-style-image</li>
+		<li>list-style-position</li>
+	</ol>
+	<hr>
+	
+	<ol class="book3">
+		<li>이미지 목록 스타일</li>
+		<li>list-style-type</li>
+		<li>list-style-image</li>
+		<li>list-style-position</li>
+	</ol>
+	<hr>
+	
+	<ol class="book4">
+		<li>들여쓰기 목록 스타일</li>
+		<li>list-style-type</li>
+		<li>list-style-image</li>
+		<li>list-style-position</li>
+	</ol>
+	<hr>
+	
+	<ol class="book5">
+		<li>한꺼번에 표시하는 목록 스타일</li>
+		<li>list-style-type</li>
+		<li>list-style-image</li>
+		<li>list-style-position</li>
+	</ol>
+
+
+
+
+</body>
+</html>

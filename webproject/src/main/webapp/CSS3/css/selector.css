@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+body {
+	background-color: #eee;
+}
+
+section {
+	width: 600px;
+	margin: 20px auto;
+}
+
+p {
+	width: 500px;
+	padding: 10px;
+	background-color: white;
+	border: 1px solid #ccc;
+}
+
+/* 연결 선택자 : 선택자를 2개 이상 조합 */
+/* 1. 하위 선택자 */
+/* section 요소의 하위 모든 p 요소 선택 */
+/* 형식) 상위요소 하위요소 */
+
+section p { /* section,p -> 그룹 */
+	color: blue;
+}
+
+/* 2. 자식 선택자 */
+/* section 요소의 (한단계 아래) 자식 p 요소 선택 */
+/* 형식) 상위요소 > 하위요소 */
+
+section>p {
+	color: red;
+}
+
+/* 3. 인접 형제 선택자 */
+/* 같은 부모를 가진 형제 요소중에 첫번째 형제 요소만 선택 */
+/* h1 요소의 형제 요소 중에서 첫번째 형제 p 요소만 선택 */
+/* 형식) 부모요소 요소1(자식) + 요소2(형제) */
+/* +p+p : 두번째 형제 p 요소 선택 */
+section h1+p {
+	background-color: orange;
+	color: #fff;
+}
+
+section h1+p+p+div {
+	background-color: magenta;
+}
+
+/* 4. 형제 선택자 */
+/* 같은 부모를 가진 자식 요소중에 모든 형제 요소 선택 */
+/* h1 요소의 형제 요소 중에서 모든 형제 p 요소 선택 */
+/* 형식) 부모요소 요소1(자식) ~ 요소2(형제) */
+
+section h1~p {
+	background-color: yellow;
+	color: red;
+}
+
+section h1~div {
+	background-color: green;
+}
+

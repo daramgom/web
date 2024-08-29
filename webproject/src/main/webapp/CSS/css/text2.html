@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트 관련 스타일-2</title>
+<style type="text/css">
+
+/* 텍스트 정렬: text align 속성 */
+h1 {
+	text-align: left;
+}
+
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
+}
+.justify {
+	text-align: justify;
+}
+
+/* 줄간격 조정: line-height 속성 */
+.small_line {
+	line-height: 200%;
+/* 	line-height: 24px; */
+/* 	line-height: 2.0; */
+}
+
+.heading {
+/* 글자가 세로방향에서 중앙에 오게하려면 line-height 속성을 사용
+	-> line-height: ~~; 속성과 숫자를 동일하게 맞추어 주기 !! */
+	background-color: rgb(0, 0, 0);
+	color: #ffffff;
+	width: 300px;
+	height: 500px;
+	font-size: 3em;
+	text-align: center;
+	line-height: 500px;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+	<h1>레드향</h1>
+	<p>껍질에 붉은 빛이 돌아 레드향이라 불린다.</p>
+	<p>레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+	<p>비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+	
+	<hr>
+	
+	<h3> 텍스트 정렬 </h3> <!-- start, end -->
+	<p class="left">
+	껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.
+	</p>
+	
+	<p class="right">
+	껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.
+	</p>
+	
+	<p class="center">
+	껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.
+	</p>
+	
+	<p class="justify">
+	껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.
+	</p>
+	<hr>
+	
+	<h3> 줄간격 지정 </h3>
+	<p class="small_line">
+	껍질에 붉은 빛이 돌아 레드향이라 불린다.
+	레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.
+	</p>
+	<hr>
+	
+	<div class="heading">
+	HTML
+	</div>
+
+</body>
+</html>

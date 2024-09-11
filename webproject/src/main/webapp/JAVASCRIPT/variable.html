@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수(variable)</title>
+</head>
+<body>
+
+<h3> 자바스크립트 변수 : typeof 키워드로 자료형 알아보기 </h3>
+
+<p> 형식) typeof 데이터값(변수) </p>
+<p> 변수 선언 형식) var 변수명 = 저장할 값; </p>
+<p> 변수의 자료형(예: int, double, ...)은 붙이지 않는다. </p>
+<hr>
+
+<p> 템플릿 문자열 = 백틱 </p>
+<p> 1) 여러 데이터형의 결합할 때 +(연결연산자)를 이용하는 대신 문자열 사이에 변수 or 수식을 ${}에 넣어 사용하는 방법이다. </p>
+<p> 2) 작은 따옴표가 아닌 역쿼트(``)를 사용하여 묶어서 지정한다. </p>
+<p> 3) 결과형은 문자열형으로 저장(출력)된다. </p>
+<p> 4) 형식) `〈HTML 태그〉문자열 ${수식 or 변수} 문자열 〈/HTML 태그〉` </p>
+<hr>
+
+<script type="text/javascript">
+	var currentYear = 2024;
+	var birthYear;
+	var age = "";
+	
+	birthYear = prompt('( •̀ ω •́ )✧ 태어난 연도(출생연도)입력하시오. (YYYY)');
+	
+	if(birthYear == null || birthYear == "") {
+		alert('정확한 출생연도를 입력해주세요.');
+	} else if(birthYear < 1890 || birthYear > 2024) {
+		alert('정확한 출생연도를 입력해주세요.');
+	} else {
+		age = currentYear - birthYear;
+	}
+	// console.log(birthYear);
+	
+	// document.write('( •̀ ω •́ )✧ 올해는 <big><b>'+currentYear+'</big></b>년 입니다. <br>');
+	// document.write('( •̀ ω •́ )✧ 올해 당신의 나이는 <big><b>'+age+'</big></b>세 입니다 ~^_^~');
+	
+	// `<HTML태그> 문자열 ${변수} 문자열 숫자 </HTML태그>` 백틱
+	document.write(`( •̀ ω •́ )✧ 올해는 <big><b> ${currentYear} </big></b>년 입니다. <br>`);
+	document.write(`( •̀ ω •́ )✧ ${birthYear}년에 태어난 당신의 올해 ${currentYear}년 나이는 <big><b> ${age} </big></b>세 입니다 ~^_^~`);
+	
+</script>
+
+</body>
+</html>

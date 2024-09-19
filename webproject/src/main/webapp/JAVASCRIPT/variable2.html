@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>변수(variable)</title>
+</head>
+<body>
+	<h3>자바스크립트에서 변수 선언 형식</h3>
+	
+	<script type="text/javascript">
+		document.write(`<h4>( •̀ ω •́ )/ 1. 전역변수 : 스크립트 내부에서 자유롭게 사용할 수 있는 변수</h4>`);
+		sub = "전역변수";
+		document.write(`sub = ${sub} <br>`);
+		sub = "스크립트 내부에서 자유롭게 이용할 수 있는 변수"
+		document.write(`sub = ${sub} <br>`);
+		sub = 123;
+		document.write(`sub = ${sub} <hr>`);
+		
+		document.write(`<h4>( •̀ ω •́ )/ 2. var 변수명 : 동일한 변수명으로 중복 선언과 재할당이 가능한 변수(지역변수)</h4>`);
+		var subject = "JAVA";
+		document.write(`<b>var</b> subject = ${subject} <br>`);
+		var subject = "SCRIPT";
+		document.write(`<b>var</b> subject = ${subject} <br>`);
+		var subject = 919;
+		document.write(`<b>var</b> subject = ${subject} <hr>`);
+		
+		document.write(`<h4>( •̀ ω •́ )/ 3. let 변수명 : 동일한 변수명으로 중복 선언은 할 수 없고 재할당만 가능한 변수(지역변수)</h4>`);
+		let subject1 = "JAVASCRIPT";
+		document.write(`<b>let</b> subject1 = ${subject1} <br>`);
+		subject1 = "variable";
+		document.write(`subject1 = ${subject1} <hr>`);
+		
+		document.write(`<h4>( •̀ ω •́ )/ 4. const 변수명 : 동일한 변수명으로 중복 선언과 재할당이 안되는 변수 (상수화)</h4>`)
+		const subject2 = "JSJS";
+		document.write(`<b>const</b> subject2 = ${subject2} <br>`);
+		// subject2 = "JAVASCRIPTJSJS"; 오류 --> 새로운 데이터 값 대입할 수 없음 : 상수화
+		document.write(`subject2 = "JAVASCRIPTJSJS" / 결과 : subject2 = ${subject2} (오류 --> 새로운 데이터 값 대입할 수 없음) <hr>`);
+		
+		
+		
+	</script>
+
+
+
+</body>
+</html>

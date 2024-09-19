@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 표현식</title>
+</head>
+<body>
+	<h3>함수 표현식</h3>
+	<script type="text/javascript">
+		document.write(`<h3> 1. 익명함수 : 함수 이름이 없음 </h3>`);
+		document.write(`<p> 함수 자체가 식으로 표현되는 형태이기 때문에 변수에 할당(대입)해서 사용할 수 있음 </p>`);
+		document.write(`<p> 다른 함수의 매개변수로 넘겨줄 수 있음 </p><hr>`);
+		
+		document.write(`<p> <b>선언문 형식으로 함수 생성 : </b>만들어 놓은 함수에 이름이 있고 언제든지 호출해서 사용할 수 있음 </p><hr>`);
+		function sum(a,b) {
+			return a + b;
+		}
+		
+		document.write(`<p> <b>익명함수 형식으로 함수 생성 : </b>함수 이름을 지정하지 않고 변수에 함수를 담아서 저장 (함수 객체) </p>`);
+		document.write(`<p> 함수 수행은 변수명을 사용해서 호출하고 ()내에 매개변수 값을 넣어줌 </p>`);
+		let sum1 = function(a,b) {
+			return a + b;
+		}
+		document.write(`sum1 = ${sum1} <br>`); // 함수 코드(식)가 출력
+		
+		// sum1 변수 내에 담아놓은 함수를 사용하는 방법
+		// 변수명(매개변수값)
+		sum1(10,20); // 함수 호출도 하고 반환값도 가지고 있음
+		document.write(`sum1(10,20) = ${sum1(10,20)} <hr>`);
+		
+		document.write(`<p> <b> 익명 함수를 함수의 매개변수로 넘겨줌 </b> </p>`);
+		function cal(func) {
+			let add = func(20,30);
+			document.write(`add = ${add} <br>`);
+			return add;
+		}
+		
+		// 함수 호출
+		document.write(" function cal(func) { <br>"
+			+"let add = func(20,30); <br>"
+			+"document.write(`add = ${add}`); <br>"
+			+"return add; <br>"
+			+"} <br>");
+		
+		cal(sum1); // sum1 변수에는 함수 코드(식)이 저장되어 있음
+		
+		document.write(`<hr> <p> <b> ** Callback 함수 </b> </p>`);
+		document.write(`<p> 함수의 매개변수로 함수 자체를 넘겨 받아 매개변수로 넘어온 함수를 실행하는 기법을 말함 </p>`);
+		
+		
+	
+	</script>
+	
+	
+</body>
+</html>

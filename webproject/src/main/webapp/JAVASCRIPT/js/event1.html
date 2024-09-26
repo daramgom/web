@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트와 이벤트 리스터(이벤트 핸들러)</title>
+</head>
+<body>
+	<h3>이벤트와 이벤트 리스터(이벤트 핸들러, 이벤트 처리기)</h3>
+	<h3>1. 인라인(inline) 방식, 2. 프로퍼티 방식, 3. addEventListener 방식</h3>
+	
+	<h2>1) 인라인(inline) 방식 : 이벤트를 HTML 요소(tag)의 속성으로 직접 지정하는 방식</h2>
+	<h2>형식) 〈태그 on이벤트 = "함수명"〉</h2>
+	<hr>
+	
+	<form>
+	<p>1. 문서 로딩 이벤트</p>
+	<body onload="alert('onload:문서의 로딩이 끝남');"></body>
+	
+	<p>2. 마우스 이벤트<br>
+	<button type="button" onclick="alert('onclick : 마우스 클릭');">버튼을 클릭할 때 이벤트</button><br></p>
+	
+	<p>3. 키보드 이벤트<br>
+	<input type="text" name="t1" onkeyup="alert('onkeyup : 키에서 손을 뗄 때');" placeholder="onkeyup"><br></p>
+	
+	<p>4. 폼 이벤트<br>
+	1) 포커스가 해제될 때<br>
+	<input type="text" name="t2" onblur="alert('onblur : 포커스를 잃었을 때');" placeholder="onblur" maxlength="10"><br></p>
+	
+	<p>2) 내용이 변경될 때<br>
+	<input type="text" name="t3" onchange="alert('onchange : 내용이 변경될 때');" placeholder="onchange"><br>
+	<input type="text" name="t3" oninput="alert('oninput : 내용이 변경될 때');" placeholder="oninput"><br>
+	onchange, oninput 실행되는 시점이 다름</p>
+	
+	<select name="choice" onchange="alert('onchange : 내용이 변경될 때');">
+		<option value="one">목록1</option>
+		<option value="two">목록2</option>
+		<option value="three">목록3</option>
+	</select><br>
+	</form>
+	
+	
+
+</body>
+</html>

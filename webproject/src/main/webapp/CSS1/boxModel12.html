@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+#contents {
+	background: url(image3/bg.jpg) no-repeat;
+	background-size: cover;
+	width: 800px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	/* 하위(자식) 요소인 position:absolute가 움직일 때 시작 위치의 기준이 됨 */
+}
+
+h1 { /* 부모 요소 공간 안에 넣어야 자식 요소가 됨 */
+	font-size: 120px;
+	color: #fff;
+	text-shadow: 2px 3px 0 #000;
+	position: absolute;
+	/* position:absolute는 부모요소가 relative인 경우에 부모 요소를 기준으로 이동 */
+	right: 100px;
+	bottom: 100px;
+}
+</style>
+</head>
+<body>
+
+	<div id="contents">
+		<h1>CSS3</h1>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 객체(event object)</title>
+</head>
+<body>
+<h3>이벤트 대상에 접근하기 : this 예약어</h3>
+
+<div class="container">
+	
+	<img src = "./goldcoin.jpg" id="coin">
+	
+</div>
+<script>
+	/* 
+	let coin = document.querySelector('#coin');
+	coin.onclick = function(e) {
+		
+		alert(`이미지 파일 : ${coin.src}`); // 자신의 객체명(변수명)
+		alert(`이미지 파일 : ${this.src}`); // 자신의 객체에 접근 : this
+		alert(`이미지 파일 : ${e.src}`); // 이벤트 정보만 가지고 있다. 오류(coin 정보 없음 => undefined )
+		alert(`이미지 이벤트 발생 위치 : ${e.pageX},${e.pageY}`);
+		
+	}
+	*/
+</script>
+<hr>
+
+<p>이벤트가 발생한 대상에 접근할 때 이벤트 처리기에서 예약어 this를 사용할 수 있다.
+이벤트 리스너에서 익명함수 function(){}에 this를 사용하면 이벤트가 발생한 노드(요소)를 가리킨다.</p>
+
+<p>이벤트 리스너에서 익명함수 function(){}가 아닌 fat arrow 화살표 함수를 사용하게 되면
+this는 window 객체를 가리킨다. (자체적인 this가 없음)</p>
+
+<script>
+	let coin = document.querySelector('#coin');
+	coin.onclick = (e) => {
+		
+		alert(`이미지 파일 : ${coin.src}`); // 자신의 객체명(변수명)
+		alert(`이미지 파일 : ${this.src}`); // 자신의 객체에 접근 : this
+		alert(`이미지 파일 : ${e.src}`); // 이벤트 정보만 가지고 있다. 오류(coin 정보 없음 => undefined )
+		alert(`이미지 이벤트 발생 위치 : ${e.pageX},${e.pageY}`);
+		
+	}
+</script>
+
+
+
+
+
+</body>
+</html>

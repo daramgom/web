@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 반응형 지정시에 반드시 기입 -->
+<meta name='viewport' content='width-device-width, initial-scale=1.0'>
+<title>탬플릿 영역을 만들어서 배치하기</title>
+
+<style type="text/css">
+
+#wrapper {
+	display: grid;
+	grid-template-columns:repeat(3,1fr);
+	grid-template-rows:repeat(3,100px);
+}
+	/* 탬플릿 영역 지정 */
+	
+	/* 
+	1---2---3---4
+	| 1 | 1 | 1 |
+	2------------
+	| 2 | 3 | 3 |
+	3------------
+	| 2 | . | 4 |
+	4------------
+	 */
+	 
+	 /* grid 라인을 이용하여 항목 배치하기 */
+	 /* 열번호 지정 속성 : grid-column-start, grid-column-end, grid-column */
+	 /* 행번호 지정 속성 : grid-row-start, grid-row-end, grid-row */
+
+.box {
+	padding: 15px;
+	color: white;
+	font-weight: 900;
+	text-align: center;
+	border:1px solid #eee;
+	background-color: red;
+}
+
+.box1 {
+	background-color: navy;
+	
+	/* grid-column-start:1; */
+	/* grid-column-end:4; */
+	
+	/* 열번호를 슬래시(/)를 붙여서 한꺼번에 지정 */
+	grid-column:1/4;
+	
+	/* grid-row-start:1; */
+	/* grid-row-end:2; */
+	grid-row:1/2;
+}
+.box2 {
+	background-color: orange;
+	
+	/* grid-column-start:1; */
+	/* grid-column-end:2; */
+	grid-column:1/2;
+	
+	/* grid-row-start:2; */
+	/* grid-row-end:4; */
+	grid-row:2/4;
+}
+.box3 {
+	background-color: yellow;
+	
+	/* grid-column-start:2; */
+	/* grid-column-end:4; */
+	grid-column:2/4;
+	
+	/* grid-row-start:2; */
+	/* grid-row-end:3; */
+	grid-row:2/3;
+}
+.box4 {
+	background-color: green;
+	
+	/* grid-column-start:3; */
+	/* grid-column-end:4; */
+	grid-column:3/4;
+	
+	/* grid-row-start:3; */
+	/* grid-row-end:4; */
+	grid-row:3/4;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+	<div class="box box1">box1</div>
+	<div class="box box2">box2</div>
+	<div class="box box3">box3</div>
+	<div class="box box4">box4</div>
+
+
+</div>
+
+</body>
+</html>

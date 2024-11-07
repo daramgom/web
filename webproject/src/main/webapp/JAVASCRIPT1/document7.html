@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM(Document Object Model)</title>
+</head>
+<body>
+<h3>form and javascript</h3>
+<p>폼 요소에 접근</p>
+<p>1) id나 class 속성값을 사용해서 폼 요소에 접근하기 : document.querySelector("")</p>
+<p>2) name 속성값을 사용해서 폼 요소에 접근하기 : document.폼태그의 name속성.태그의 name속성<br>
+예시) document.loginForm.id</p>
+<p>3) 폼 배열을 사용해서 폼 요소에 접근하기 : document.forms[0].elements[4]</p>
+
+<h1>회원가입</h1>
+<form name="loginForm" action="server1.html" method="get" onsubmit="return checkLogin(event);">
+	<p>아이디 : <input type="text" name="id" id="id" autocomplete="off"> </p>
+	<p>닉네임 : <input type="text" name="nickname" id="nickname" autocomplete="off"> </p>
+	<p>비밀번호 : <input type="password" name="pw" id="pw"> </p>
+	<p>이메일 : <input type="email" name="email" id="email" autocomplete="off"> </p>
+	<p>취미 : <input type="text" name="hobby" id="hobby" autocomplete="off"> </p>
+	<input type="submit" value="전송">
+</form>
+
+<span>여기에 표시</span>
+<p id="text"></p>
+<p id="text1"></p>
+
+<script>
+	let id = document.querySelector("#id");
+	let nickname = document.forms[0].elements[1];
+	let pw = document.loginForm.pw; // name 속성을 단계적으로 적어주는 방식으로 접근
+	let email = document.forms["loginForm"].elements["email"];
+	let hobby = document.forms["loginForm"]["hobby"];
+	
+	let text = document.getElementById("text");
+	let text1 = document.getElementById("text1");
+	
+	id.onkeyup = function() {
+		/*
+		let result = this.value;
+		text.innerText = result;
+		*/
+		text.innerText = document.loginForm.id.value;
+	}
+	
+	nickname.onkeyup = function() {
+		/*
+		let result = this.value;
+		text1.innerText = result;
+		*/
+		text1.innerText = document.loginForm.nickname.value;
+	}
+	
+	
+</script>
+<hr>
+
+<p>유효성 검사 : 1) 기본 유효성 검사, 2) 정규 표현식으로 유효성 검사</p>
+<p> 1) 기본 유효성 검사 </p>
+
+<script>
+	// 데이터가 입력되지 않은 경우
+	// 전송 버튼을 누르면 각 요소값을 바로 전송하는 것이 아니고 유효성 검사를 하는 함수
+	function checkLogin(e) {
+		e.preventDefault();
+		let form = document.loginForm;
+		
+		// id 검사
+		if(form.id.value == ""){
+			alert("아이디를 입력하세요");
+			form.id.focus();
+			return false;
+		}
+		
+		// 비밀번호 검사
+		if(form.pw.value == ""){
+			alert("비밀번호를 입력하세요");
+			form.pw.select();
+			return false;
+		}
+		
+		// 자바스크립트만으로 서버에 폼 데이터를 전송을 하고자 하는 경우
+		form.submit();
+	}
+	
+	
+	
+	
+</script>
+
+</body>
+</html>

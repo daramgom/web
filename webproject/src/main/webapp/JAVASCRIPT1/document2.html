@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+</head>
+<body>
+<h3>자바스크립트를 사용한 문서 객체 생성(요소, tag 생성)</h3>
+<h3>요소 생성 방법 : 1) 정적 생성 방법, 2) 동적 생성 방법</h3>
+
+<p>1) 정적 생성 방법 : html 문서에 태그로 직접 작성하여 생성하는 방법</p>
+<h1>제목 태그 1</h1>
+<hr>
+
+<p>2) 동적 생성 방법 : 자바스크립트를 사용하여 요소를 생성하는 방법</p>
+<p>속성(property) 방식과 메서드 방식의 2가지로 생성</p>
+<p>2-1) 메서드 방식으로 생성 : document.write() 메서드로 생성</p>
+<script>
+	document.write(`<h2>제목 태그 2</h2>`);
+</script>
+<hr>
+
+<p>2-2) 메서드 방식으로 생성 - 2 : document.write() 메서드로 생성</p>
+<p>appendChild() 메서드를 같이 사용해야 한다.</p>
+<script>
+	let h2 = document.createElement('h2');
+	h2.innerHTML = "제목 태그 2 다시 만들기";
+	document.body.appendChild(h2);
+</script>
+
+</body>
+</html>

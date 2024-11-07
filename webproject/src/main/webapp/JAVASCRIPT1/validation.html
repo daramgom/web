@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>유효성검사(validation)</title>
+</head>
+<body>
+
+<h1>회원가입</h1>
+<form name="loginForm" action="server1.html" method="get" onsubmit="return checkLogin(event);">
+	<p>아이디 : <input type="text" name="id" id="id" autocomplete="off"> </p>
+	<div id="checkedResult" name="checkedResult"></div>
+	<p>비밀번호 : <input type="password" name="pw" id="pw"> </p>
+	<div id="checkPw"></div>
+	<input type="submit" value="전송">
+</form>
+<hr>
+
+<p>유효성 검사 : 1) 기본 유효성 검사, 2) 정규 표현식으로 유효성 검사</p>
+<p> 1) 기본 유효성 검사 </p>
+
+<script>
+	let id = document.querySelector("#id");
+	let pw = document.loginForm.pw; // name 속성을 단계적으로 적어주는 방식으로 접근
+	
+	
+	// 데이터가 입력되지 않은 경우
+	// 전송 버튼을 누르면 각 요소값을 바로 전송하는 것이 아니고 유효성 검사를 하는 함수
+	function checkLogin(e) {
+		e.preventDefault();
+		let form = document.loginForm;
+		
+		// id 검사
+		if(form.id.value == ""){
+			alert("아이디를 입력하세요");
+			form.id.focus();
+			return false;
+		}
+		
+		// 비밀번호 검사
+		if(form.pw.value == ""){
+			alert("비밀번호를 입력하세요");
+			form.pw.select();
+			return false;
+		}
+		
+		// 자바스크립트만으로 서버에 폼 데이터를 전송을 하고자 하는 경우
+		form.submit();
+	}
+	
+	let checkedResult = false; // true : 조건이 맞음, false : 조건이 맞지 않음
+	let checkPw = false;
+	
+	// 1. 입력 id 길이가 4 ~ 12자 사이만 통과
+	document.loginForm.id.onblur = function() {
+		if(id.value.length >= 4 && id.value.length <= 12) {
+			document.querySelector("#checkedResult").innerText = "사용 가능한 아이디입니다";
+			document.querySelector("#checkedResult").style.color = "navy";
+			document.querySelector("#checkedResult").style.fontWeight = "900";
+			
+			// id규칙 검사 적합
+			checkedResult = true;
+		} else {
+			document.querySelector("#checkedResult").innerText = "4자~12자 사이의 아이디만 사용 가능합니다";
+			document.querySelector("#checkedResult").style.color = "red";
+			document.querySelector("#checkedResult").style.fontWeight = "900";
+			
+			// id규칙 검사 부적합
+			checkedResult = false;
+		}
+	}
+	
+	// 2. 입력 pw 길이가 4 ~ 12자 사이만 통과
+	document.loginForm.pw.onkeyup = function() {
+		if(pw.value.length >= 4 && pw.value.length <= 12) {
+			document.querySelector("#checkPw").innerText = "사용 가능한 비밀번호입니다";
+			document.querySelector("#checkPw").style.color = "navy";
+			document.querySelector("#checkPw").style.fontWeight = "900";
+			
+			// pw규칙 검사 적합
+			checkPw = true;
+		} else {
+			document.querySelector("#checkPw").innerText = "4자~12자 사이의 비밀번호만 사용 가능합니다";
+			document.querySelector("#checkPw").style.color = "red";
+			document.querySelector("#checkPw").style.fontWeight = "900";
+			
+			// pw규칙 검사 부적합
+			checkPw = false;
+		}
+	}
+	
+</script>
+	
+</body>
+</html>

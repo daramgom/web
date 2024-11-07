@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>screen 객체</title>
+</head>
+<body>
+<h3>screen 객체로 공지사항 창을 중앙에 배치하기</h3>
+<p>문서를 열면 팝업창이 표시됩니다.....</p>
+
+<script>
+
+//               "history1.html", "pop", 500, 400
+function openCenter(doc, win, w, h){
+	
+//(UI 영역을 제외한 영역의 가로 너비 - 팝업창의 가로 너비)/2 = (1000 - 500)/2 = 250
+let left = (screen.availWidth - w) / 2; //팝업창의 시작 왼쪽 좌표
+document.write(`left = ${left} <br>`);
+
+//(UI 영역을 제외한 영역의 세로 너비 - 팝업창의 세로 너비)/2 = (600 - 400)/2 = 100
+let top = (screen.availHeight - h) / 2; //팝업창의 시작 위쪽 좌표
+document.write(`top = ${top} <br>`);
+	
+//window.open("연결할 파일명", "창이름", "창옵션")
+//(창옵션 : 창의 구성 요소 : width=500, height=400, left=000, top=000)
+
+let opt = `width = ${w}, height= ${h} , left=${left}, top=${top}`;
+document.write(`opt = ${opt}<br>`);
+
+//함수내에서 계산한 결과로 window.open() 메서드를 호출해서 새로운 팝업창 열기!!
+//함수내에서 새로운 공치사항창 열기
+//window.open("연결할 파일명", "창이름", "창옵션")
+window.open(doc, win, opt)
+
+}
+
+
+//function openCenter(doc, win, w, h) 함수호출
+openCenter("history1.html", "pop", 1000, 800);
+
+</script>
+
+
+</body>
+</html>

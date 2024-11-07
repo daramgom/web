@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 표현식</title>
+</head>
+<body>
+	<h3>화살표 함수(fat arrow(=>)) : 익명함수를 작성할 때 구문을 축약해서 생성하는 방법</h3>
+	<p>function 키워드 없이 (fat arrow(=>))를 이용해서 함수를 생성</p>
+	
+	<script type="text/javascript">
+// 		const hi = function() {
+// 			return "안녕하세요";
+// 		}
+		
+		// 1. 매개변수가 없는 경우
+		// function 키워드 대신 => 로 사용
+		// 매개변수 () 괄호는 붙여준다.
+		// 함수내에 수행내용이 한 줄만 있는 경우에는 중괄호{}와 return 키워드를 생략할 수 있다.
+		
+		// const hi = () => {return "안녕하세요";};
+		// const hi = () => return "안녕하세요"; --> 오류(중괄호만 생략)
+		const hi = () => "안녕하세요";
+		
+		document.write(`<h3>함수 실행 결과 : ${hi() }</h3>`);
+		
+	</script>
+	<hr>
+	
+	
+	<script type="text/javascript">
+		// 2. 매개변수가 1개인 경우
+		
+// 		const hi2 = function(user) {
+// 			document.write(`${user}님 안녕하세요`);
+// 		}
+// 		hi2("홍길동");
+		
+		// 매개변수 () 괄호는 생략할 수 있다.
+		// const hi2 = user => {document.write(`${user}님 안녕하세요`);};
+		const hi2 = (user) => {document.write(`${user}님 안녕하세요`);};
+		hi2("홍길동");
+		
+	</script>	
+	<hr>
+	
+	
+	<script type="text/javascript">
+	// 매개변수가 2개인 경우
+// 	let sum3 = function(a,b) {
+// 		return a + b;
+// 	}
+	
+	// 매개변수 () 괄호는 생략할 수 없다.
+	let sum3 = (a,b) => a + b;
+	document.write(`sum3(10,2) = ${sum3(10,2)}`);
+	
+	</script>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 조건문</title>
+<style type="text/css">
+.divBox1 {
+	width: 700px;
+	height: 60px;
+	background-color: #e3bc5c;
+	text-align: center;
+	font-size: 2em;
+	box-shadow: 2px 2px #ccc;
+	border-radius: 25px;
+}
+
+</style>
+</head>
+<body>
+<h3>자리 배치도 만들기(p.489)</h3>
+<p> 입장객 수, 한줄에 앉는 사람 수, 자리 줄 수 </p>
+<p> 직접 숫자형으로 변환 Number(), parseInt(), parseFloat() </p>
+
+<script type="text/javascript">
+	var memNum = prompt(" ( •̀ ω •́ )✧ 입장객은 몇 명인가요? ");
+	var colNum = prompt(" ( •̀ ω •́ )✧ 한 줄에 몇 명씩 앉습니까? ");
+	var rowNum;
+	
+		if(memNum % colNum === 0) {
+			rowNum = parseInt(memNum / colNum);
+		} else {
+			rowNum = parseInt(memNum / colNum) + 1; // 남는 입장객이 있다면 1줄이 늘어나야 한다.
+		}
+	
+</script>
+<div class="divBox1">
+<script type="text/javascript">
+	document.write(`( •̀ ω •́ )✧ 모두 <big style="color:#fb6544;"><b>${rowNum}</big></b> 개의 줄이 필요합니다.`);
+</script>
+</div>
+
+</body>
+</html>

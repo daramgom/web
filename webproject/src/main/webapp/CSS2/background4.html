@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 크기 조정</title>
+<style type="text/css">
+div {
+	width:200px; height:150px;
+	/* background-image: url("./image/bg4.jpg");
+	background-repeat: no-repeat; */
+	background: url("./image/bg4.jpg") no-repeat;
+	border: 2px solid black;
+	margin: 10px;
+	color: red;
+}
+#box1 {
+/* 기본값 : 기존의 배경 이미지만큼만 표시 */
+	background-size: auto;
+}
+#box2 {
+/* px단위로 이미지 크기 변경 */
+	background-size: 200px 150px;
+}
+#box3 {
+/* 백분율(%)단위로 이미지 크기 변경 */
+	background-size: 100% 80%;
+}
+#box4 {
+/* 배경이미지로 요소를 다 덮도록 이미지를 확대, 축소하여 자동 크기 변경 */
+	background-size: cover;
+}
+#box5 {
+/* 배경이미지가 요소내에 모두 들어오도록 이미지를 확대, 축소하여 자동 크기 변경 */
+	background-size: contain;
+}
+
+</style>
+</head>
+<body>
+<h3>이미지 크기 조정 : background-size 속성</h3>
+<div id="box1">auto</div>
+<div id="box2">200px 150px</div>
+<div id="box3">100% 80%</div>
+<div id="box4">cover</div>
+<div id="box5">contain</div>
+
+
+</body>
+</html>

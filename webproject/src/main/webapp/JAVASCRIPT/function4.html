@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수 표현식</title>
+</head>
+<body>
+	<h3>즉시 실행 함수 : 정의 되어(함수를 실행하는 순간)즉시 실행되는 함수</h3>
+	<p>한번만 실행하는 1회성 함수를 정의하고 동시에 즉시 실행되는 함수 형태</p>
+	
+	<script type="text/javascript">
+	// 익명 함수로 작성하고 함수의 처음과 마지막을 ()로 감싸주어야 함
+	// 끝의 ()내에 매개변수 값을 넣어줌
+	(function() {
+		let userName = prompt("이름 입력 >>");
+		document.write(`안녕하세요 ${userName} 님 환영합니다 <br>`);
+	})(); 
+	
+	(function(a,b) {
+		sum = a + b;
+		document.write(`<h4> sum = ${sum} </h4>`);
+	})(10,20);
+	
+	
+	</script>
+	
+	
+</body>
+</html>

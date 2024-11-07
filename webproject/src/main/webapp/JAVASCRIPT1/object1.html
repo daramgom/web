@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체(Object)</title>
+</head>
+<body>
+<h3>객체(Object)</h3>
+<p>프로그램에서 인식할 수 있는 모든 대상을 가리킨다.</p>
+<p>자바스크립트에서 객체는 데이터를 저장하고 처리하는 기본단위이다.</p>
+<p>자바스크립트에서 필요한 시스템을 객체라고도 한다.</p>
+<hr>
+
+
+<p>객체 생성:1.객체 리터럴 이용 방식, 2.Object() 객체 생성자 함수를 이용하는 방식
+3.(생성자)함수 이용 방식, 4.클래스 이용 방식</p>
+
+<p>1.객체 리터럴 이용 방식</p>
+<script>
+//1.객체 리터럴 이용 방식
+
+const Person = {
+	//프로퍼티(property:속성)	
+	//형식)key : value;
+	
+	name:"김하나",
+	age:20,
+	show : function show() {
+		document.write(`<p> 이름: ${this.name} , 나이 :  ${this.age} </p> `);
+	}
+		
+}
+
+//객체 프로퍼티에 접근하기 : 점표기법(dot notation), 괄호 표기법(bracket notation)
+Person.show();
+console.log(Person);
+
+let irum = Person.name;
+let nai = Person.age;
+document.write(`<p> 이름: ${irum} , 나이 :  ${nai} </p> `);
+Person.show();
+
+//프로퍼티 속성값 변경
+//1)점표기법(dot notation)
+Person.name = "이두나";
+Person.age = 25;
+Person.show();
+
+//2)괄호 표기법(bracket notation)
+Person['name'] = '오세나';
+Person['age'] = 22;
+Person['show']();
+
+</script>
+<hr>
+
+<p>2.자바스크립트에 내장되어 있는 Object() 생성자 함수를 사용하는 방법</p>
+<!--처음에 빈 객체를 만든 후 필요할 때마다 프로퍼티를 추가하는 방법-->
+<script>
+	
+let book = {};	//비어있는 객체 생성
+//let book = new Object();	
+	
+book.title = "웹표준의 정석";
+book.price = 15000;
+book.show = function show() {
+		document.write(`<p> 제목: ${this.title} , 가격 :  ${this.price} </p> `);
+	}
+
+book.show();
+console.log(book);
+	
+</script>
+
+
+
+</body>
+</html>

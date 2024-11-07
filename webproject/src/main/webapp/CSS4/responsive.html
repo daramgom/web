@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- 뷰포트 메타 태그 작성 -->
+<meta name="viewport" content="width = device-width, initial-scale = 1"> <!-- initial-scale : 1배 -->
+
+<title>반응형 웹(Responsive Web)</title>
+<style type="text/css">
+h1 {
+	font-size: 10vw; /* viewport 크기의 10% */
+	text-align: center;
+}
+
+div p:nth-child(1) {
+	border: 10px solid #eee;
+	padding: 10px;
+	font-weight: 900;
+	width: 600px;
+}
+
+div p:nth-child(2) {
+	border: 10px solid #eee;
+	padding: 10px;
+	font-weight: 900;
+	max-width: 600px; /* 최대 600px 까지 반응 */
+}
+
+div p:nth-child(3) {
+	border: 10px solid #eee;
+	padding: 10px;
+	font-weight: 900;
+	min-width: 600px; /* 최소 600px 이하는 줄어들지 않게 반응 */
+}
+
+
+
+</style>
+</head>
+<body>
+
+	<!-- 1. 반응형 웹(Responsive web) : 웹 요소를 디바이스(desktop, tablet, phone)의 화면 크기에 맞게 재배치하고 -->
+	<!--  각 요소의 표시 방법만 바꿔서 구현하는 것이다. -->
+
+	<!-- 1) 뷰포트(viewport) : 웹 페이지의 가시 영역을 의미하고 사용자가 웹페이지를 볼 수 있게 하는 실제 화면영역을 말한다. -->
+	<!-- 2) 뷰포트 메타 태그 작성 : 각각의 디바이스들을 크기에 맞게 인식하도록 할 때 사용하는 태그이다. -->
+	<!-- 3) 형식) <meta name="" content=""> -->
+	<!-- 		 name="viewport" -> 디바이스 화면이 표시되는 실제 화면 영역 -->
+	<!-- 		 content="웹 페이지 크기와 화면 배율을 제어하는 방법에 대한 브라우저의 지침을 지정" -->
+	<!-- 		 <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+	<h1>안녕하세요?</h1>
+	<div>
+		<p>레드향 껍질에 붉은 빛이 돌아 레드향이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배
+			크고, 과육이 붉고 통통하다. 비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+
+		<p>레드향 껍질에 붉은 빛이 돌아 레드향이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배
+			크고, 과육이 붉고 통통하다. 비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+
+		<p>레드향 껍질에 붉은 빛이 돌아 레드향이라 불린다. 레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배
+			크고, 과육이 붉고 통통하다. 비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p>
+	</div>
+
+</body>
+</html>

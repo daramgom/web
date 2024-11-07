@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 기본 입출력</title>
+</head>
+<body>
+
+<h3>
+* 입력하기<br>
+1. 확인/취소 입력 받기 --> confirm(); <br>
+2. 데이터 입력 받기 --> prompt(); 
+</h3>
+<hr>
+
+<h3> 1. 확인/취소 입력 받기 --> confirm(); </h3>
+<p> 확인 --> true , 취소 --> false 값을 변수에 저장해준다. </p>
+<script type="text/javascript">
+	// 형식) confirm("질문 메시지"); 
+	// a = 10.0; --> 전역변수
+	var reply = confirm(' ( •̀ ω •́ )✧ 바꾸시겠습니까? ');
+	console.log('( •̀ ω •́ )✧ reply : '+reply);
+	document.write('<b>( •̀ ω •́ )/ reply : '+reply+'</b>');
+
+</script>
+<hr>
+
+<h3> 2. 데이터 입력 받기 --> prompt();  </h3>
+<p> 키보드에서 입력받은 데이터 값을 변수에 저장해준다. </p>
+<script type="text/javascript">
+	// 형식) prompt("질문 메시지", "기본값(default, 생략가능)");
+	var name = prompt('( •̀ ω •́ )✧ 너의 이름은 ? ', '( •̀ ω •́ )✧');
+	document.write('<b>( •̀ ω •́ )/ 이름 : '+name+'</b>');
+	
+</script>
+<hr>
+
+<script type="text/javascript">
+	// 키보드로 자신의 이름을 입력받고 출력하기
+	var name = prompt('( •̀ ω •́ )✧ 이름을 입력하시오');
+	document.write("<big><b>"+name+"</big></b> 님, 환영합니다.");
+	// <span style='font-size:1.5em; font-weight:bold;'></span>
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표 스타일</title>
+
+<style type="text/css">
+div { /* 테이블의 가로 크기가 너무 클 경우 스크롤바가 생기게 되고 
+	왼쪽, 오른쪽 스크롤바를 드래그 해서 테이블의 모든 내용을 볼 수 있도록 지정하는 속성 */
+	overflow-x: auto;
+}
+table {
+	/* 표 제목 위치 지정: 아래쪽에 표시 */
+	caption-side: bottom;
+	/* table 태그 선택자로 테두리를 지정하면 외곽선만 표시된다 */
+	border: 1px solid black;
+	/* 셀 사이의 여백을 지정 */
+	/* 형식) border-spacing: 수평거리 수직거리 */
+	border-spacing: 0px;
+	
+	/* 표와 셀 테두리를 합쳐서 표시: 표 테두리가 하나의 선모양으로 표시 */
+	border-collapse: collapse;
+	
+	/* 테이블 너비 지정 */
+	width:450px;
+	
+	/* 안쪽 여백 */
+	/* padding:20px; */
+	
+	/* 바깥쪽 여백: 브라우저의 가로방향에서 정중앙에 오게하는 방법(auto) */
+	margin:0 auto;
+}
+th {
+	margin:0px;
+	/* padding:10px; */
+	background-color: #eee;
+	border: 1px solid black;
+	padding:10px;
+}
+td {
+	/* padding:10px; */
+	border: 1px solid black;
+	text-align: center;
+	padding:10px;
+}
+
+</style>
+</head>
+<body>
+
+<div>
+<table>
+<caption>2019 국민 독서실태</caption>
+	<tr>
+		<th width="150">구분</th>
+		<th>성인</th>
+		<th>독서자</th>
+	</tr>
+	<tr>
+		<th>종이책</th>
+		<td>6.1권</td>
+		<td>11.8권</td>
+	</tr>
+	<tr>
+		<th>전자책</th>
+		<td>1.2권</td>
+		<td>7.1권</td>
+	</tr>
+	<tr>
+		<th>오디오북</th>
+		<td>0.2권</td>
+		<td>5.5권</td>
+	</tr>
+</table>
+</div>
+
+
+
+</body>
+</html>

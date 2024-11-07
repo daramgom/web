@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 반응형 지정시에 반드시 기입 -->
+<meta name='viewport' content='width-device-width, initial-scale=1.0'>
+<title>CSS 레이아웃 (그리드 : grid)</title>
+<style type="text/css">
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width:100vw;
+	height:100vh;
+	margin:0;
+}
+
+.items {
+	background-color:coral;
+	font-size:2em;
+	font-weight:900;
+	border:1px solid black;
+}
+
+#container {
+	display: grid;
+	
+	/* px 단위 : 크기가 고정되어 있음 */
+	/* grid-template-columns : 50px 50px 50px; */ /* 3열 */
+	/* grid-template-rows : 100px 200px 100px; */ /* 3행 */
+	
+	
+	/* 반복되는 크기 지정을 간편하게 사용 : repeat(개수,크기); */
+	/* grid-template-columns : repeat(4,200px); */ 
+	/* grid-template-rows : repeat(2,200px); */ /* row 수에 맞지않는 row는 적용 X */
+	
+	
+	/* 상대적인 크기를 지정하는 단위 : fr(fraction) */
+	/* 너비가 같은 컬럼을 3개 배치 : (1:1:1) 비율 */
+	/* grid-template-columns : 1fr 2fr 1fr 1fr 1fr; */ /* 5열 */
+	/* grid-template-rows : repeat(2,200px); */ /* 2행 */
+	
+	
+	/* minmax(최소크기, 최대크기) : min보다는 크거나 같고 max보다 같거나 작은 범위 */
+	/* grid-template-columns : minmax(200px,300px); */
+	/* grid-template-columns : repeat(3,1fr); */
+	grid-template-columns : repeat(3,minmax(200px,300px));
+	grid-template-rows : repeat(3,minmax(200px,auto));
+	margin-bottom: 50px;
+}
+
+#container1 {
+	/* 컬럼 최소 너비가 200px인 컬럼을 화면 너비에 가득찰 때까지 배치 : 남는 공간 없이 채워서 표시 */
+	/* 8개의 div를 동일한 크기로 최소 너비가 200px, 최대가 1fr 크기로 채워서 남는 공간 없이 표시 */
+	
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+	margin-bottom: 50px;
+}
+
+#container2 {
+	/* 컬럼 최소 너비 200px만 표시하고 남는 공간은 그대로 둠 */
+	/* 8개의 div를 최소 너비가 200px, 최대 1fr 크기로 지정하고 남는 공간은 그대로 두기 */
+	display:grid;
+	grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+	margin-bottom: 50px;
+}
+
+#container3 {
+	display:grid;
+	grid-template-columns:repeat(3,200px);
+	
+	/* 컬럼(열) 사이의 간격, 행사이의 간격 */
+	/* grid-column-gap:50px; */
+	/* grid-row-gap:50px; */
+		
+	/* 한꺼번에 지정 : 속성을 1개만 지정하면 전부 동일한 크기로 지정, 2개 지정하면 열과 행 각각 지정 */
+	grid-gap:50px 50px;
+}
+
+
+</style>
+</head>
+<body>
+<div id='container'>
+	<div class='items'>1</div>
+	<div class='items'>2</div>
+	<div class='items'>3</div>
+	<div class='items'>4</div>
+	<div class='items'>
+	눈이 오는가 북쪽엔
+	함박눈 쏟아져 내리는가
+	
+	험한 벼랑을 굽이굽이 돌아간
+	백무선(白茂線) 철길 위에
+	느릿느릿 밤새워 달리는
+	화물차의 검은 지붕에
+	
+	연달린 산과 산 사이
+	너를 남기고 온
+	작은 마을에도 복된 눈 내리는가
+	
+	잉크병 얼어드는 이러한 밤에
+	어쩌자고 잠을 깨어
+	그리운 곳 차마 그리운 곳
+	
+	눈이 오는가 북쪽엔
+	함박눈 쏟아져 내리는가
+	</div>
+	<div class='items'>6</div>
+	<div class='items'>7</div>
+	<div class='items'>8</div>
+	<div class='items'>9</div>
+
+</div>
+
+<div id='container1'>
+	<div class='items'>1</div>
+	<div class='items'>2</div>
+	<div class='items'>3</div>
+	<div class='items'>4</div>
+	<div class='items'>
+	눈이 오는가 북쪽엔
+	함박눈 쏟아져 내리는가
+	
+	험한 벼랑을 굽이굽이 돌아간
+	백무선(白茂線) 철길 위에
+	느릿느릿 밤새워 달리는
+	화물차의 검은 지붕에
+	
+	연달린 산과 산 사이
+	너를 남기고 온
+	작은 마을에도 복된 눈 내리는가
+	
+	잉크병 얼어드는 이러한 밤에
+	어쩌자고 잠을 깨어
+	그리운 곳 차마 그리운 곳
+	
+	눈이 오는가 북쪽엔
+	함박눈 쏟아져 내리는가
+	</div>
+	<div class='items'>6</div>
+	<div class='items'>7</div>
+	<div class='items'>8</div>
+	<div class='items'>9</div>
+
+</div>
+
+<div id='container2'>
+	<div class='items'>1</div>
+	<div class='items'>2</div>
+	<div class='items'>3</div>
+	<div class='items'>4</div>
+	<div class='items'>
+	눈이 오는가 북쪽엔
+	함박눈 쏟아져 내리는가
+	
+	험한 벼랑을 굽이굽이 돌아간
+	백무선(白茂線) 철길 위에
+	느릿느릿 밤새워 달리는
+	화물차의 검은 지붕에
+	
+	연달린 산과 산 사이
+	너를 남기고 온
+	작은 마을에도 복된 눈 내리는가
+	
+	잉크병 얼어드는 이러한 밤에
+	어쩌자고 잠을 깨어
+	그리운 곳 차마 그리운 곳
+	
+	눈이 오는가 북쪽엔
+	함박눈 쏟아져 내리는가
+	</div>
+	<div class='items'>6</div>
+	<div class='items'>7</div>
+	<div class='items'>8</div>
+	<div class='items'>9</div>
+
+</div>
+
+<div id='container3'>
+	<div class='items'>1</div>
+	<div class='items'>2</div>
+	<div class='items'>3</div>
+	<div class='items'>4</div>
+	<div class='items'>
+	눈이 오는가 북쪽엔
+	함박눈 쏟아져 내리는가
+	
+	험한 벼랑을 굽이굽이 돌아간
+	백무선(白茂線) 철길 위에
+	느릿느릿 밤새워 달리는
+	화물차의 검은 지붕에
+	
+	연달린 산과 산 사이
+	너를 남기고 온
+	작은 마을에도 복된 눈 내리는가
+	
+	잉크병 얼어드는 이러한 밤에
+	어쩌자고 잠을 깨어
+	그리운 곳 차마 그리운 곳
+	
+	눈이 오는가 북쪽엔
+	함박눈 쏟아져 내리는가
+	</div>
+	<div class='items'>6</div>
+	<div class='items'>7</div>
+	<div class='items'>8</div>
+	<div class='items'>9</div>
+
+</div>
+
+</body>
+</html>

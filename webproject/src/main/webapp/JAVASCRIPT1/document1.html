@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM(Document Object Model)</title>
+</head>
+<body>
+<h3>document 객체 : DOM(Document Object Model)</h3>
+<p>자바스크립트를 이용하여 웹문서에 접근하고 제어할 수 있도록 웹 문서를 체계적으로 정리해
+놓은 자바스크립트 객체(인터페이스)이다.</p>
+
+<script>
+
+function fun1() {
+	
+	//document 객체의 프로퍼티
+	alert(document.title);
+	alert(document.location);
+	alert(document.inputEncoding);
+	alert(document.lastModified);
+	
+}
+
+function fun2() {
+	document.title = "타이틀변경";
+	alert(document.title);
+	document.bgColor = 'red';
+}
+
+function fun3(color) {
+	
+	document.bgColor = color;
+}
+
+</script>
+
+<input type="button" value="프로퍼티확인" onclick="fun1();">
+<input type="button" value="타이틀변경" onclick="fun2();">
+
+<hr>
+<input type="radio" name="bgcolor" value="red" onclick="fun3('#FFDAB9')">red
+<input type="radio" name="bgcolor" value="blue" onclick="fun3('#ADD8E6')">blue
+<input type="radio" name="bgcolor" value="green" onclick="fun3('#77DD77')">green
+<input type="radio" name="bgcolor" value="purple" onclick="fun3('#E6E6FA')">purple
+
+
+</body>
+</html>

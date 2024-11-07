@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트와 이벤트 리스너(이벤트 핸들러)</title>
+</head>
+<body>
+<h3>이벤트와 이벤트 리스너(이벤트 핸들러, 이벤트 처리기)</h3>
+<p>1.인라인(inline) 방식, 2.프로퍼티 방식, 3.addEventListener방식 </p>
+
+<p>1)인라인(inline) 방식 : 이벤트를 HTML 요소(tag)의 속성으로 직접 지정하는 방식</p>
+<p>형식)<태그 on이벤트 = "함수명"></p>
+<hr>
+
+<form>
+
+<p>1.문서 로딩 이벤트</p>
+<body onload="alert('onload:문서의 로딩이 끝남')"></body>
+
+<p>2.마우스 이벤트</p>
+<button type="button" onclick="alert('onclick:마우스 클릭')">버튼을 클릭할 때 이벤트</button><br>
+
+<p>3.키보드 이벤트</p>
+<input type="text" name="t1" onkeyup="alert('onkeyup:키에서 손을 뗄때')"><br>
+
+<p>4.폼 이벤트</p>
+1)포커스가 해제될 때
+<input type="text" name="t2" onblur="alert('onblur:포커스를 잃었을때')"><br>
+
+2)내용이 변경될 때
+<input type="text" name="t3" onchange="alert('onchange:내용이 변경될 때')"><br>
+<!-- <input type="text" name="t3" oninput="alert('oninput:내용이 변경될 때')"><br> -->
+
+
+<select name="choice" onchange="alert('onchange:내용이 변경될 때')">	
+	<option value="one">목록1</option>
+	<option value="two">목록2</option>
+	<option value="three">목록3</option>	
+</select><br>
+</form>
+
+<p>3)폼이벤트 :onreset, onsubmit 이벤트</p>
+1)onsubmit : submit 단추를 눌러서 폼 요소를 전송할 때<br>
+2)onreset : reset 단추를 눌러서 폼을 리셋(초기화) 할 때 <br>
+
+<form action="#" method="get" 
+onreset="alert('onreset:reset 단추를 눌러서 폼을 리셋(초기화) 할 때')"
+onsubmit="alert('onsubmit:submit 단추를 눌러서 폼요소를 전송 할 때')"
+>
+	아이디 : <input type="text" name="id"><br>
+	비밀번호 :<input type="password" name="pw"><br>
+	<input type="reset" value="reset">
+	<input type="submit" value="submit">	
+	<input type="button" value="돌아가기" onclick="history.back();"> 
+</form>	
+
+
+
+
+
+</body>
+</html>

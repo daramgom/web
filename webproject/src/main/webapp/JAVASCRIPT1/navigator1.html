@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>네비게이터 객체</title>
+</head>
+<body>
+
+<h3>Navigator 객체</h3>
+<p>사용자의 브라우저 종류, 버전, 플러그인 설치정보,자바스크립트 엔진 종류, 
+모바일로 접속했는지 등을 확인할 수 있다</p>
+
+<script>
+function win1() {	
+	document.write(navigator.userAgent);
+}
+
+</script>
+
+
+<input type="button" value="브라우저정보" onclick="win1();">
+
+<script>
+ let txt = "";
+ txt += "<p>Browser CodeName(브라우저 코드명): " + navigator.appCodeName + "</p>";
+ txt += "<p>Browser Name(브라우저명): " + navigator.appName + "</p>";
+ txt += "<p>Browser Version(브라우저 버전): " + navigator.appVersion + "</p>";
+ txt += "<p>Cookies Enabled(쿠키사용가능): " + navigator.cookieEnabled + "</p>";
+ txt += "<p>Browser Language(브라우저 언어): " + navigator.language + "</p>";
+ txt += "<p>Browser Online(브라우저 온라인모드): " + navigator.onLine + "</p>";
+ txt += "<p>Platform(플랫폼): " + navigator.platform + "</p>";
+ txt += "<p>User-agent header(브라우저 에이전트): " + navigator.userAgent + "</p>";
+ document.write(txt);
+ </script>
+
+
+</body>
+</html>

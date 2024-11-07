@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM(Document Object Model)</title>
+<style>
+	#container {
+		width: 400px;
+		margin: 20px auto;
+		text-align: center;
+	}
+	
+	#rect {
+		width: 100px;
+		height: 100px;
+		border: 1px solid black;
+		margin:  30px auto;
+		transition: 500ms; /* 0.5초 동안 변화시킴 */
+	}
+	
+</style>
+</head>
+<body>
+	<h3>자바스크립트로 요소에 CSS 적용하기</h3>
+	<p>형식) 요소명.style.CSS속성명 = "CSS속성값";</p>
+	<p>예시) myRect.style.backgroundColor = "orange";</p>
+	<p>CSS 속성명에 하이픈(-)이 들어가는 대신 하이픈(-) 다음 문자를 대문자로 표시한다</p>
+	<p>background-color => backgroundColor</p>
+	
+<div id="container">
+	<p>도형 위로 마우스 포인터를 올려놓으세요</p>
+	<div id="rect"></div>
+</div>
+
+<script>
+	let myRect = document.querySelector("#rect");
+	myRect.addEventListener("mouseover", function() {
+		myRect.style.backgroundColor = "orange";
+		myRect.style.borderRadius = "50%";
+	});
+	myRect.addEventListener("mouseout", function() {
+		myRect.style.backgroundColor = "";
+		myRect.style.borderRadius = "";
+	});
+</script>
+
+
+</body>
+</html>

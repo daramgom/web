@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>브라우저 객체</title>
+</head>
+<body>
+
+<h1>여기는 main 창</h1>
+
+<script>
+
+function win() {
+	//window객체내에 새창을 띄우는 메서드 : open() 메서드
+	//형식)window.open("파일명(경로)","창이름", "창옵션(창의 구성요소"));
+	window.open("open_window.html", "pop", "width=500, height=500");	
+}
+
+
+
+</script>
+
+<input type="button" value="창열기" onclick="win();">
+
+
+</body>
+</html>
